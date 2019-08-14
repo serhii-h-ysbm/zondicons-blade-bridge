@@ -20,7 +20,7 @@ class ZondiconsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(SvgFactory::class, function () {
-            $config = Collection::make(config('blade-svg', []))->merge([
+            $config = Collection::make(config('zondicons', []))->merge([
                 'spritesheet_path' => base_path('vendor/zondicons/blade-bridge/resources/sprite.svg'),
                 'svg_path' => base_path('vendor/zondicons/blade-bridge/resources/icons'),
                 'sprite_prefix' => 'zondicon-',
